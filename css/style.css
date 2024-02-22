@@ -1,0 +1,585 @@
+/*Generell CSS*/
+
+body
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(0, 83, 157);
+    color:rgb(235, 230, 225);
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.body
+{
+    padding: 5px;
+    text-align: center;
+}
+
+/* Detta är ett så kallat pseudo-element för att kunna göra tillföra en transpareneffekt på backgrundsbilden*/
+body::before
+{
+    content: "";
+    background-image: url("../bilder/RobloxPortals.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.05; /*0.0-1.0 som är gränserna*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /*För att placera den här sektionen bakom innehållet*/
+}
+
+header 
+{
+    display: flex;
+    align-items: stretch; /*Gör så att det blir samma höjd för båda kolumner även om innehållet är mer omfattande i den ena kolumnen*/
+    justify-content: space-between;
+    background-color: rgb(0, 83, 157);
+    padding: 0;
+    border-radius: 10px;
+    margin-left: 0;
+}
+
+.column1 
+{
+    display: flex;
+    flex: 1; /*Samma storlek för båda kolumner*/
+    align-items: flex-start;
+    background-color: rgb(2, 70, 126);
+    padding: 0;
+    border-radius: 0 30px 30px 0; /*Styr rundade hörn och hur mycket avrundningen ska vara*/
+    text-align: center;
+    margin: 10px;
+    margin-left: 0;
+}
+
+.logo 
+{
+    margin: 10px; /*Skapar en "skyddad yta" så att inte något riskerar att täcka loggan*/
+}
+
+.column-info
+{
+    color: rgb(226, 202, 167);
+    align-items: center;
+    padding: 40px 0 40px 0; /*Behöver inte 10px i padding på vänstersidan, för att få samma avstånd som till ikonerna i högerkolumnen, eftersom loggan har margin 10px*/
+    text-align: left;
+}
+
+.column2 
+{
+    display: flex;
+    flex: 1; /*Samma storlek för båda kolumner*/
+    margin: 10px;
+    background-color: rgb(2, 70, 126);
+    padding: 0 30px 0 0; /*Få luft mellan ikonerna och höger skärmkant*/
+    border-radius: 30px 0 0 30px;
+    text-align: center;
+    margin-right: 0;
+    white-space: pre-line;
+}
+
+.column-text
+{
+    color: rgb(226, 202, 167);
+    padding: 0 10px 0 200px;
+    text-align: right;
+}
+
+.column-social
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /*Centrerar ikonerna i kolumnen*/
+    padding: 0 0 20px 0;
+}
+
+.navbar
+{
+    margin: 30px;
+    text-align: center;
+}
+
+.navbar a
+{
+    border-radius: 7px;
+    padding: 15px 20px;
+    margin: 5px;
+}
+
+nav 
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color:blanchedalmond
+}
+
+nav a /*Justerar utseendet på länkarna i top nav bar*/
+{
+    float: none;
+    display: inline-block;
+    color: rgb(226, 202, 167);
+    background-color: rgb(2, 70, 126);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+nav a:hover
+{
+    background-color: rgb(0, 100, 167);
+    transform: scale(1.07);
+    color:aliceblue;
+    border: 2px rgb(1, 26, 43);
+}
+
+.pictures
+{
+    margin-top: 10px;
+    margin-left: 30%;
+    padding: 20px;
+    text-align: left;
+    width: 800px;
+    height: 500px;
+}
+
+.image-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}    
+
+.image 
+{
+    border-radius: 20px;
+    margin: 10px; /*För att skapa mellanrum mellan bilderna*/
+    overflow: hidden; /*Balnd annat för att få de rundade kanterna att synas*/  
+    width: calc(50% - 20px);
+    height: 400px;
+}
+
+.pets
+{
+    display: block; /*Gör så att innehållet i divven är centrerat på sidan*/
+    width: 100%;
+}
+
+.text 
+{
+    width: 800px;
+    margin: 0 auto; /*Behövs göras på detta sätt för att textmassa ska bli centrerad*/
+    text-align: center;
+}
+
+video
+{
+    width: 800px;
+    height: 500px;
+}
+
+.social-media
+{
+    text-align: left;
+    background-color: rgb(3, 42, 75);
+    padding: 5px; /*För att få luft för texten till skärmkanten*/
+}
+
+#no-scroll
+{
+    position: fixed; /*Fixed position håller det synligt*/
+    bottom: 20px; /*Justerar avståndet till botten*/
+    right: 20px; /*Justerar avståndet till högerkanten*/
+}
+
+footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(3, 42, 75);
+    padding: 5px; /*För att få luft för texten till skärmkanten*/
+}
+
+.footer-column1
+{
+    display: flex;
+    flex: 1;
+
+}
+
+.footer-column2
+{
+    display: flex;
+    flex: 1;
+}
+
+.footer-column3
+{
+    display: flex;
+    flex: 1;
+}
+
+.footer-column1 .footer-column2 .footer-column3 
+{
+    width: 33.33%; /*För att kunna ha en kolumn under så info i den inte hamnar bredvid dessa tre*/
+    float: left;
+}
+
+.footer-below
+{
+    width: 100%;
+}
+
+.footer-below a
+{
+    color: blanchedalmond;
+}
+
+/*
+            ***
+            ***
+            ***
+OBS NEDAN FÖRLJER UNDERSIDES CSS-KOD
+            ***
+            ***
+            ***
+*/
+
+/*
+    ***    
+Merch-sidan
+    ***
+*/
+
+.image-merch
+{
+    position: relative;
+    display: inline-block;
+    margin: 30px
+}
+
+.image-merch img 
+{
+    max-width: 100%; /*Säkrar att bilden inte går utanför sin "behållare"*/
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.image-text 
+{
+    position: absolute;
+    bottom: 0; /*Positionerar texten längst ner på containernan/bilden*/
+    left: 0; /*Justerar texten horisontellt*/
+    background: rgba(0, 0, 0, 0.7); /*Svart bakgrund med justerad transparens*/
+    color: #fff; 
+    padding: 10px; 
+    width: 100%; /*Gör så att texten fyller hela bildytan*/
+    box-sizing: border-box; /*Får med paddingen i bredden*/
+    font-size: 28px;
+    border-radius: 0 0 20px 20px; 
+}
+form
+{
+    text-align: center;
+}
+/*
+    ***    
+Gameinfo-sidan
+    ***
+*/
+
+.gameinfopictures img
+{
+    border-radius: 20px;
+}
+
+/*
+    ***    
+Asset-sidan
+    ***
+*/
+
+.pumpkin
+{
+    display: block;
+    max-width: 100%;
+    overflow: hidden; /*Gör så att överskjutande delar av bilder/grafik skärs av*/
+    width: 800px;
+    height: auto;
+}
+
+/*Jobba ännu mer med att justera utseendet på tabellen när killarna bestämt sig för designen*/
+table
+{
+    border: 5px solid rgb(4, 59, 4);
+    display: block;
+}
+
+table td
+{
+    padding: 10px 50px 10px 50px;
+}
+
+/*Jobba ännu mer med att justera utseendet på tabellen när killarna bestämt sig för designen*/
+textarea
+{
+    border: 5px solid rgb(4, 4, 61)
+}
+
+/*
+    ***    
+Kontaktsidan
+    ***
+*/
+
+#name
+{
+    border: 5px solid rgb(4, 59, 4);
+}
+
+#email
+{
+    border: 5px solid rgb(4, 59, 4);
+}
+
+/*Media query för responsivitet*/
+@media (max-width: 1024px) 
+{
+    .column-text
+    {
+        padding: 10px;
+    }
+    .pets 
+    {
+        display: flex; /*Detta gör så att bilderna skalar sig inom synliga skärmytan när ytan minskar*/
+        flex-direction: column;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .text
+    {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .image 
+    {
+        width: calc(50% - 20px); /*Två kolumner, drar ifrån margin*/
+    }
+    
+}
+
+
+/*Media query för responsivitet*/
+@media (max-width: 600px) 
+{
+    header 
+    {
+        flex-direction: column;
+    }
+    .column1, .column2 {
+        flex-direction: column; /*Båda kolumnerna blir till en kolumn*/
+        width: 100%; /*Gör så att båda kolumner tar upp hela skärmbredden på mindre skärmar*/
+        border-radius: 0;
+        margin-left: 0;
+        overflow: hidden;
+    }
+    .navbar a
+    {
+        flex-direction: column;
+        width: 100%;
+        margin: 5px;
+        border-radius: 0;
+        margin-left: 0;
+        padding-right: 5px;
+    }
+    .navbar
+    {
+        margin-left: 0;
+        
+    }
+    .column-social
+    {
+        display: none;
+    }
+    .column-info
+    {
+        display: none;
+    }
+    #no-scroll
+    {
+        display: none /*Tar bort den här eftersom ett scroll-drag med fingret och du är längst upp på sidan direkt*/
+    }
+    .image-container
+    {
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    .image
+    {
+        width: 100%;
+        
+    }
+    .gameinfopictures img
+    {
+        width: 100%;
+    }
+    .image-merch
+    {
+        margin: 0 0 30px 0;
+    }
+    .image-merch img
+    {
+        width: 100%;
+        margin: 0;
+    }
+    textarea
+    {
+        width: 100%;
+    }
+    .pets 
+    {
+        flex-direction: column;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .text
+    {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .video
+    {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        width: 100%;
+    }
+    footer 
+    {
+        flex-direction: column;
+    }
+    .footer-column1 .footer-column2 .footer-column3 
+    {
+        width: 100%; /*Endast för att kunna ha en kolumn under så info i den inte hamnar bredvid dessa tre*/
+        float: none;
+        text-align: center;
+    }
+}
+
+/*Jobbas vidare med längre fram i vinter/ nästa år om killarna vill
+.info
+{
+    text-align: ;
+}
+.text 
+{
+    Width: 800px;
+    text-align: center;
+}
+display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        align-items: center;
+.image-text 
+{
+    
+    position: absolute;
+    top: 50%;  Adjust the vertical position of the text 
+    left: 50%;  Adjust the horizontal position of the text 
+    transform: translate(-50%, -50%);  Center the text within the container 
+    background: rgba(0, 0, 0, 0.5); /* Background color for the text 
+    color: #fff; /* Text color 
+    padding: 10px; /* Padding around the text 
+}
+
+.youtube
+{
+    width: 5px;
+    height: 5px;
+}
+
+
+.text
+{
+    float: left;
+    width: 50%;
+}
+
+.trailer
+{
+    display: inline-block;
+}
+
+.navigation
+{
+    float: left;
+    text-align: left;
+    margin-top: 50px;
+    padding-left: 5px;
+    width: 20%;
+    font-family: algerian, serif;
+    font-size: 24px;
+    padding: 5px;
+}
+
+Justerar utseendet på länkarna i vänsterställda nav bar
+
+.navigation a
+{
+    float: none;
+    display: inline-block;
+    color: rgb(226, 202, 167);
+    background-color: rgb(6, 123, 202);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    width: 100%;
+    
+}
+
+.navigation a:hover
+{
+    
+}
+
+.navigation a:active
+{
+    background-color: darkgreen;
+}
+
+.navigation a:visited
+{
+    background-color: rgb(1, 146, 146);
+}
+
+/*Hitta bättre fonter för h1-h6
+h1
+{
+    font-family: cat walzhari, centaury , dalfitra, walbaum display semibold,  algerian,  serif;
+}
+/*Aktivera dessa när jag gör sidan responsiv
+nav a:active
+{
+    background-color: darkgreen;
+}
+
+nav a:visited
+{
+    background-color: aqua;
+}
+*/
+
