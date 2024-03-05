@@ -34,6 +34,21 @@ body::before
     z-index: -1; /*För att placera den här sektionen bakom innehållet*/
 }
 
+.sidebar 
+{
+    display: flex;
+    width: 30%;
+    /*background-color: #f1f1f1;*/ 
+    
+}
+
+.assets 
+{
+    
+    flex: 1;
+    
+}
+
 header 
 {
     display: flex;
