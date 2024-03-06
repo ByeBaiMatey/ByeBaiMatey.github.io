@@ -37,16 +37,14 @@ body::before
 .sidebar 
 {
     display: flex;
-    width: 30%;
-    /*background-color: #f1f1f1;*/ 
-    
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .assets 
 {
-    
+    display: flex;
     flex: 1;
-    
 }
 
 header 
