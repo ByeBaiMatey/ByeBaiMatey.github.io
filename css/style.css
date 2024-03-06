@@ -41,9 +41,8 @@ body::before
 
 .sidebar 
 {
-    width: 30%;
-    
-    height: 100vh; /* Adjust height as needed */
+    width: 20%;
+    height: 100vh; /*Adjust height as needed*/
     display: flex;
     flex-direction: column;
     padding-top: 20px;
