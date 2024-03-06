@@ -49,7 +49,7 @@ body::before
     padding-top: 20px;
 }
 
-.didebar a 
+.sidebar a 
 {
     display: block; /* This ensures that each link takes the full width and is on a new line */
 }
