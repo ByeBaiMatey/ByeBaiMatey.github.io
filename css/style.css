@@ -34,17 +34,24 @@ body::before
     z-index: -1; /*För att placera den här sektionen bakom innehållet*/
 }
 
-.sidebar 
+.container
 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+}
+
+.sidebar 
+{
+    width: 30%;
+    
+    height: 100vh; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
 }
 
 .assets 
 {
-    display: flex;
-    flex: 1;
+    
 }
 
 header 
