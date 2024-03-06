@@ -49,9 +49,9 @@ body::before
     padding-top: 20px;
 }
 
-.assets 
+.didebar a 
 {
-    
+    display: block; /* This ensures that each link takes the full width and is on a new line */
 }
 
 header 
