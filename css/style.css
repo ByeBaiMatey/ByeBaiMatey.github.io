@@ -9,12 +9,14 @@ body
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+   
 }
 
 .body
 {
     padding: 5px;
     text-align: center;
+    
 }
 
 /* Detta är ett så kallat pseudo-element för att kunna göra tillföra en transpareneffekt på backgrundsbilden*/
@@ -37,20 +39,22 @@ body::before
 .container
 {
     display: flex;
+    text-align: center;
 }
 
 .sidebar 
 {
     width: 20%;
-    height: 100vh; /*Adjust height as needed*/
+    height: 100vh; /*vh stands for viewport height. Yhis means that the sidebar div takes up the entire height of that specific parent div or tag*/
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    
 }
 
 .sidebar a 
 {
-    display: block; /* This ensures that each link takes the full width and is on a new line */
+    display: block; /* This ensures that each link takes the full width and the secont link to the last appears on a new line*/
 }
 
 header 
@@ -179,7 +183,7 @@ nav a:hover
 {
     border-radius: 20px;
     margin: 10px; /*För att skapa mellanrum mellan bilderna*/
-    overflow: hidden; /*Balnd annat för att få de rundade kanterna att synas*/  
+    overflow: hidden; /*Bland annat för att få de rundade kanterna att synas*/  
     width: calc(50% - 20px);
     height: 400px;
 }
