@@ -57,6 +57,11 @@ body::before
     display: block; /* This ensures that each link takes the full width and the secont link to the last appears on a new line*/
 }
 
+.profit-container
+{
+    padding: 0 0 0 200px;
+}
+
 header 
 {
     display: flex;
